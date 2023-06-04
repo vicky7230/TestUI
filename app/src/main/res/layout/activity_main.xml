@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="10dp"
+            app:srcCompat="@drawable/arrow" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/noto_sans_bold"
+            android:gravity="center"
+            android:text="자유톡"
+            android:textColor="@color/dark_black"
+            android:textSize="18sp" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="16dp"
+            app:srcCompat="@drawable/bell" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/profile_pic"
+                    android:layout_width="34dp"
+                    android:layout_height="34dp"
+                    android:layout_marginStart="16dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/profile_pic" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/profile_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/noto_sans_bold"
+                    android:includeFontPadding="false"
+                    android:text="안녕 나 응애"
+                    android:textColor="@color/dark_black"
+                    android:textSize="14sp"
+                    app:layout_constraintLeft_toRightOf="@id/profile_pic"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/height_weight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:includeFontPadding="false"
+                    android:text="165cm ・53kg"
+                    android:textColor="@color/light_gray"
+                    android:textSize="12sp"
+                    app:layout_constraintLeft_toRightOf="@id/profile_pic"
+                    app:layout_constraintTop_toBottomOf="@id/profile_name" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="14dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="4dp"
+                    app:layout_constraintBottom_toBottomOf="@id/profile_name"
+                    app:layout_constraintLeft_toRightOf="@id/profile_name"
+                    app:layout_constraintTop_toTopOf="@id/profile_name"
+                    app:srcCompat="@drawable/check" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tag"
+                    android:layout_width="58dp"
+                    android:layout_height="24dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/curvd_rectangle_green"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="팔로우"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/noto_sans_bold"
+                android:includeFontPadding="false"
+                android:text="지난 월요일에 했던 이벤트 중 가장 괜찮은 상품 뭐야?"
+                android:textColor="@color/dark_black"
+                android:textSize="14sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:layout_marginTop="16dp"
+                android:includeFontPadding="false"
+                android:text="지난 월요일에 2023년 S/S 트렌드 알아보기 이벤트 참석했던 팝들아~
+혹시 어떤 상품이 제일 괜찮았어?\n\n후기 올라오는거 보면 로우라이즈? 그게 제일 반응 좋고 그 테이블이
+제일 재밌었다던데 맞아???\n\n올해 로우라이즈가 트렌드라길래 나도 도전해보고 싶은데 말라깽이가
+아닌 사람들도 잘 어울릴지 너무너무 궁금해ㅜㅜ로우라이즈 테이블에
+있었던 팝들 있으면 어땠는지 후기 좀 공유해주라~~!"
+                android:textColor="@color/dark_gray"
+                android:textSize="12sp" />
+
+            <com.google.android.flexbox.FlexboxLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                app:alignContent="flex_start"
+                app:dividerDrawableHorizontal="@drawable/flexboxlayout_divider_h"
+                app:dividerDrawableVertical="@drawable/flexboxlayout_divider"
+                app:flexDirection="row"
+                app:flexWrap="wrap"
+                app:showDividerHorizontal="middle"
+                app:showDividerVertical="middle">
+
+                <TextView
+                    android:id="@+id/tag1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"
+                    android:background="@drawable/curvd_stroked_rectangle"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:text="#2023" />
+
+                <TextView
+                    android:id="@+id/tag2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"
+                    android:background="@drawable/curvd_stroked_rectangle"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:text="#TODAYISMONDAY" />
+
+                <TextView
+                    android:id="@+id/tag3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"
+                    android:background="@drawable/curvd_stroked_rectangle"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:text="#TOP" />
+
+                <TextView
+                    android:id="@+id/tag4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"
+                    android:background="@drawable/curvd_stroked_rectangle"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:text="#POPS!" />
+
+                <TextView
+                    android:id="@+id/tag5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"
+                    android:background="@drawable/curvd_stroked_rectangle"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:text="#WOW" />
+
+                <TextView
+                    android:id="@+id/tag6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="22dp"
+                    android:background="@drawable/curvd_stroked_rectangle"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:text="#ROW" />
+
+            </com.google.android.flexbox.FlexboxLayout>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="450dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/light_gray_3"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/downloaded_image" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="16dp"
+                    app:srcCompat="@drawable/heart" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="5"
+                    android:textColor="@color/light_gray"
+                    android:textSize="12sp" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    app:srcCompat="@drawable/comment" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="5"
+                    android:textColor="@color/light_gray"
+                    android:textSize="12sp" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    app:srcCompat="@drawable/boomark" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    app:srcCompat="@drawable/dots" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/light_gray_2" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/profile_pic_1"
+                    android:layout_width="34dp"
+                    android:layout_height="34dp"
+                    android:layout_marginStart="16dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/profile_pic" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/profile_name_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/noto_sans_bold"
+                    android:includeFontPadding="false"
+                    android:text="안녕 나 응애"
+                    android:textColor="@color/dark_black"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@id/profile_pic_1"
+                    app:layout_constraintLeft_toRightOf="@id/profile_pic_1"
+                    app:layout_constraintTop_toTopOf="@id/profile_pic_1" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/height_weight_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:fontFamily="@font/noto_sans_medium"
+                    android:includeFontPadding="false"
+                    android:text="1일전"
+                    android:textColor="@color/light_gray"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@id/profile_name_1"
+                    app:layout_constraintLeft_toRightOf="@id/check_img"
+                    app:layout_constraintTop_toTopOf="@id/profile_name_1" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/check_img"
+                    android:layout_width="14dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="4dp"
+                    app:layout_constraintBottom_toBottomOf="@id/profile_name_1"
+                    app:layout_constraintLeft_toRightOf="@id/profile_name_1"
+                    app:layout_constraintTop_toTopOf="@id/profile_name_1"
+                    app:srcCompat="@drawable/check" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="12dp"
+                    android:layout_height="3dp"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ellipse_h" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/comment"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginEnd="16dp"
+                    android:includeFontPadding="false"
+                    android:text="어머 제가 있던 테이블이 제일 반응이 좋았나보네요🤭
+우짤래미님도 아시겠지만 저도 일반인 몸매 그 이상도 이하도
+아니잖아요?! 그런 제가 기꺼이 도전해봤는데 생각보다
+괜찮았어요! 오늘 중으로 라이브 리뷰 올라온다고 하니
+꼭 봐주세용~!"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="12sp"
+                    app:layout_constraintLeft_toLeftOf="@id/profile_name_1"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/profile_name_1" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/like"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center_vertical"
+                    app:layout_constraintLeft_toLeftOf="@id/comment"
+                    app:layout_constraintTop_toBottomOf="@id/comment"
+                    app:srcCompat="@drawable/heart" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/like_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="5"
+                    android:textColor="@color/light_gray"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@id/like"
+                    app:layout_constraintLeft_toRightOf="@id/like"
+                    app:layout_constraintTop_toTopOf="@id/like" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/comment_2"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    app:layout_constraintBottom_toBottomOf="@id/like_count"
+                    app:layout_constraintLeft_toRightOf="@id/like_count"
+                    app:layout_constraintTop_toTopOf="@id/like_count"
+                    app:srcCompat="@drawable/comment" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="5"
+                    android:textColor="@color/light_gray"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@id/comment_2"
+                    app:layout_constraintLeft_toRightOf="@id/comment_2"
+                    app:layout_constraintTop_toTopOf="@id/comment_2" />
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/profile_pic_2"
+                    android:layout_width="34dp"
+                    android:layout_height="34dp"
+                    android:layout_marginTop="12dp"
+                    app:layout_constraintLeft_toLeftOf="@id/like"
+                    app:layout_constraintTop_toBottomOf="@id/like"
+                    app:srcCompat="@drawable/profile_pic_1" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/profile_name_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/noto_sans_bold"
+                    android:includeFontPadding="false"
+                    android:text="ㅇㅅㅇ"
+                    android:textColor="@color/dark_black"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@id/profile_pic_2"
+                    app:layout_constraintLeft_toRightOf="@id/profile_pic_2"
+                    app:layout_constraintTop_toTopOf="@id/profile_pic_2" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/comment_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginEnd="16dp"
+                    android:includeFontPadding="false"
+                    android:text="오 대박! 라이브 리뷰 오늘 올라온대요? 챙겨봐야겠다"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="12sp"
+                    app:layout_constraintLeft_toLeftOf="@id/profile_name_2"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/profile_name_2" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/like_2"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="24dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="@id/comment_1"
+                    app:layout_constraintTop_toBottomOf="@id/comment_1"
+                    app:srcCompat="@drawable/heart" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/like_count_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="5"
+                    android:textColor="@color/light_gray"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@id/like_2"
+                    app:layout_constraintLeft_toRightOf="@id/like_2"
+                    app:layout_constraintTop_toTopOf="@id/like_2" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/light_gray_2" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="16dp"
+            app:srcCompat="@drawable/image_1" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="16dp"
+            android:layout_weight="1"
+            android:text="댓글을 남겨주세요."
+            android:textColor="@color/light_gray_4" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="16dp"
+            android:text="등록"
+            android:textColor="@color/light_gray" />
+
+    </LinearLayout>
+
+</LinearLayout>

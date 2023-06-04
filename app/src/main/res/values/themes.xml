@@ -1,0 +1,9 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Base.Theme.TestUI" parent="Theme.Material3.Light.NoActionBar">
+        <item name="android:fontFamily">@font/noto_sans_regular</item>
+
+    </style>
+
+    <style name="Theme.TestUI" parent="Base.Theme.TestUI" />
+</resources>
